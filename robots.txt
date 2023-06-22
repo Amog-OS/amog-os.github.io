@@ -1,3 +1,0 @@
-User-Agent: *
-Disallow:
-Sitemap: https://www.amog-os.github.io/sitemap.xml
