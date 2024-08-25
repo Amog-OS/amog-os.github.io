@@ -1,0 +1,185 @@
+/* Misc. */
+
+body {
+    background-color: var(--amog-blacky);
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+
+    width: 100vw;
+    max-width: 1280px;
+}
+
+hr {
+    width: 90%;
+    height: 2px;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, var(--amog-blue), var(--amog-green));
+}
+
+
+/* Header */
+header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-image: url(../img/sus-on-moon.jpg);
+    background-position: 100% 50%;
+    background-size: cover;
+    box-shadow: 0 0 20px 0 #000;
+    text-align: center;
+    transition: unset;
+}
+
+header h1 {
+    font-size: 70px;
+}
+
+header h1 span {
+    font-size: 70px;
+    background-image: linear-gradient(to bottom right, var(--amog-green), var(--amog-blue));
+    white-space: nowrap;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#toppat {
+    position: relative;
+    z-index: 2;
+
+    & img {
+        width: 64px;
+        position: absolute;
+        top: -30px;
+        right: 50%;
+        z-index: -1;
+        transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
+    }
+}
+
+/* Footer */
+footer {
+
+    background: linear-gradient(to bottom right, var(--amog-blue-transparent), var(--amog-green-transparent)), url("../img/airship.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 2em;
+    padding: 0.5em;
+    width: calc(100vw - 4em);
+    max-width: 1200px;
+    margin: 2em;
+
+    display: grid;
+    grid-template-areas:
+        "logo logo empty"
+        "text links social";
+    gap: 0.25em;
+
+    .footer__text {
+        grid-area: text;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .logo {
+        grid-area: logo;
+
+        & img {
+            background-color: var(--amog-black-transparenter);
+            backdrop-filter: blur(10px) brightness(75%);
+            padding: 0.5em 1em;
+            border-radius: 2em;
+            width: 100%;
+            max-width: 13em;
+            object-fit: cover;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+
+}
+
+.footer__subsection {
+    background-color: var(--amog-black-transparenter);
+    backdrop-filter: blur(10px) brightness(75%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    border-radius: 2em;
+    overflow: visible;
+
+    &:nth-child(2) {
+        border-radius: 2em 0.5em 0.5em 2em;
+    }
+
+    &:nth-child(3) {
+        border-radius: 0.5em;
+    }
+
+    &:nth-child(4) {
+        border-radius: 0.5em 2em 2em 0.5em;
+    }
+
+}
+
+.footer__links {
+    grid-area: links;
+}
+
+/*since when CSS is like this?*/
+
+.footer__link {
+    width: auto;
+    font-weight: 700;
+    color: var(--amog-green);
+    transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
+
+    &:hover, &:focus {
+        color: var(--amog-blue);
+    }
+}
+
+.footer__social {
+    grid-area: social;
+}

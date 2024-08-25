@@ -1,0 +1,16 @@
+:root {
+    --amog-green: #66DDCC;
+    --amog-green-transparent: rgba(102, 221, 204, 0.2);
+    --amog-blue: #7289DA;
+    --amog-blue-transparent: rgba(114, 137, 218, 0.2);
+    --amog-blacky: #070A0E;
+    --amog-blacky-transparent: rgba(7, 10, 14, 0.2);
+    --amog-black: #0D1117;
+    --amog-black-transparent: rgba(13, 17, 23, 0.2);
+    --amog-black-transparenter: rgba(13, 17, 23, 0.5);
+    --amog-black-plus: #161B22; /*i rlly like dark palettes*/
+
+    /* For accessibility - outline */
+    --amog-hightlight: rgb(255, 154, 0);
+    --amog-hightlight-transparent: rgba(255, 0, 0, 0.2);
+}

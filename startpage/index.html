@@ -1,51 +1,266 @@
+<!--haccing skills #1: view page source-->
+<!--totally not copied from amogos websus-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="bookmark" href="../../icons/sus.ico">
-  <link rel="shortcut icon" href="../../icons/sus.ico" sizes="32x32">
-  <meta name="og:image" itemprop="image" content="https://amog-os.github.io/icons/sus-christmas.png">
-  <meta name="keywords" content="amogos,amog os,amongos,amogus,among us,amogos homepage,amogos start page">
-  <meta name="description" content="A very sus startpage for sussy people.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmogOS Start Page</title>
+    <meta charset="UTF-8">
+
+    <!--open graph, for website to have cool embed when shared through discord-->
+    <meta name="title" content="AmogOS Start Page">
+    <meta name="description" content="The start page for AmogOS, the sus OS.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AmogOS Start Page">
+    <meta property="og:title" content="AmogOS Start Page">
+    <meta property="og:description" content="The start page for AmogOS, the sus OS.">
+    <meta property="og:image" content="https://amog-os.github.io/banner.png">
+    <!--images like the banner of the open graph, twitter attributes, and more, MUST be a full URL in order to work-->
+    <meta name="theme-color" content="#66DDCC">
+    <!--color for that line on discord embed, change it if you want. must be a HEX value.-->
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site_name" content="website">
+    <meta property="twitter:title" content="AmogOS Start Page">
+    <meta property="twitter:description"
+          content="The start page for AmogOS, the sus OS.">
+    <meta property="twitter:image" content="https://amog-os.github.io/banner.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+          content="sus, susOS, amogOS, among us OS, amogOS linux, among us linux, sussy os, sussy baka, sussy wussy">
+    <!--keywords for better locating, in case website gets indexed on search engines, like Gogoglgoe, Microsoft Bing, DuckDuckGo, Swiftly Nature, Ecosia... (for now it's not on google btw)-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="../css/cascade-sus-sheets.css" type="text/css">
+    <!--cascade style sheets, cascade sus sheets, get it?-->
+    <link rel="icon" href="../img/amogos-logo.png"> <!--icon = favicon -->
+    <link rel="apple-touch-icon" href="../img/amogos-logo.png"> <!--icon = apple-touch-icon -->
+    <!--<link rel="google-spyware" href="google.com">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+          rel="stylesheet">
+    <!--this also includes montserrat for some reason, but it gets poppins which is the font from old amogos websus so idc-->
+
+    <script src="../js/main.js" defer></script>
+
+    <style>
+        @font-face {
+            font-family: "amogos";
+            src: url("../fonts/AmongUs-Regular.ttf");
+        }
+
+        #toppat {
+            text-transform: uppercase;
+            font-family: "amogos", sans-serif;
+        }
+
+        .highlight {
+            color: var(--amog-hightlight) !important;
+        }
+
+        #quote {
+            font-style: italic;
+
+            &:before, &:after {
+                content: '"';
+            }
+
+        }
+
+        .suggestions {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+
+            .chip {
+                background-color: var(--amog-green-transparent);
+                padding: 0.25rem 0.5rem;
+                border-radius: 6rem;
+                color: var(--amog-green);
+                font-weight: bold;
+                font-size: 0.75rem;
+                user-select: none;
+
+                &:hover {
+                    background-color: var(--amog-green);
+                    cursor: pointer;
+                    color: var(--amog-black);
+                }
+            }
+        }
+    </style>
+
 </head>
 <body>
-  <div class="shad">
-    <div class="section container">
-      <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
-        <ul>
-          <li><a id="wart" target="_blank" href="../index.html">Website</a></li>
-          <li class="is-active"><a aria-current="page" style="color: #96a0a0;">Startpage</a></li>
-        </ul>
-      </nav>
-    </div>
+
+<!-- A start page with a search bar using DuckDuckGo, a link to the downloads page, and a link to the GitHub repo. -->
+<header style="height: 100vh;">
     <div class="container">
-      <!--moon center is deprecated just so you know-->
-      <center>
-        <div class="title is-1 has-text-bold" id="yes">START</div>
-      </center>
+        <h1>AmogOS <span id="toppat">Start<img id="topHatImage" src="../img/toppat.png" alt="Top Hat"></span></h1>
+        <p id="quote" style="margin: 0; padding: 0; text-align: center; max-width: 512px;">AmogOS is cool!!</p>
+
+        <script>
+            const img = document.getElementById('topHatImage');
+
+            document.addEventListener('mousemove', (e) => {
+                const imgRect = img.getBoundingClientRect();
+                const imgCenterX = imgRect.left + imgRect.width / 2;
+                const imgCenterY = imgRect.top + imgRect.height / 2;
+
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+
+                const deltaX = mouseX - imgCenterX;
+                const deltaY = mouseY - imgCenterY;
+
+                const angle = Math.atan2(deltaY, deltaX);
+                const angleDegrees = angle * (180 / Math.PI) - 70;
+
+                img.animate(
+                    [
+                        {transform: 'translate(' + deltaX * 0.05 + 'px, ' + deltaY * 0.05 + 'px) rotate(0deg)'},
+                        {rotate: angleDegrees + 'deg'}
+                    ],
+                    {
+                        duration: 60000,
+                        iterations: 69,
+                        easing: `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`
+                    }
+                );
+            });
+
+            document.addEventListener('mouseleave', () => {
+                img.animate(
+                    [
+                        {transform: 'translate(0px, 0px) rotate(0deg)'},
+                        {transform: 'translate(0px, 0px) rotate(0deg)'}
+                    ],
+                    {
+                        duration: 60000,
+                        iterations: 69,
+                        easing: `linear`
+                    }
+                );
+            });
+
+
+        </script>
+
+        <script>
+            function randomQuote(){
+                fetch('https://api.quotable.io/random')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.querySelector('#quote').innerHTML = data.content;
+                    });
+            }
+
+            randomQuote();
+        </script>
+
     </div>
-    <div class="section conatiner">
-      <form method="get" action="https://duckduckgo.com/?">
-        <input type="text" name="q" size="31" value="" class="input is-rounded" id="serch" autocomplete="off"
-          placeholder="Search for sussy stuff">
-      </form>
+
+    <div class="search">
+        <form class="input-row" action="https://duckduckgo.com/" method="get">
+            <input class="third" type="text" name="q" placeholder="Search DuckDuckGo"
+                   autofocus required autocomplete="off" spellcheck="true">
+
+            <input class="button btn-sec" type="submit" value="Search">
+        </form>
+
+        <div class="suggestions">
+            <p>Change your search engine</p>
+            <div class="chip" data-engine="duckduckgo.com">DuckDuckGo</div>
+            <div class="chip" data-engine="google.com">Google</div>
+            <div class="chip" data-engine="bing.com">Bing</div>
+            <div class="chip" data-engine="ecosia.org">Ecosia</div>
+            <div class="chip" data-engine="shush">X</div>
+        </div>
+
+        <script>
+
+            if (localStorage.getItem('showSuggestions') === 'false') {
+                document.querySelector('.suggestions').style.opacity = "0";
+            }
+
+            const chips = document.querySelectorAll('.chip');
+            chips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const engine = chip.dataset.engine;
+                    if (engine === 'shush') {
+                        document.querySelector('.input-row input[type="text"]').value = '';
+                        localStorage.setItem('showSuggestions', 'false');
+                        document.querySelector('.suggestions').style.opacity = "0";
+                        return;
+                    }
+                    localStorage.setItem('searchEngine', engine);
+                    document.querySelector('.input-row input[type="text"]').value = `se:${engine}`;
+                });
+            });
+        </script>
+
     </div>
-    <center>
-      <div class="container">
-        <div class="title is-4 is-uppercase" id="text1">quotes of the day</div>
-      </div>
-      <div class="section container">
-        <div class="subtitle is-5" id="text"></div>
-      </div>
-    </center>
-  </div>
-  <script src="script.js"></script>
+
+    <script>
+
+        const queryInput = document.querySelector('.input-row input[type="text"]');
+        const searchButton = document.querySelector('.input-row input[type="submit"]');
+        const suggestions = document.querySelector('.suggestions');
+
+        // Get search engine from localStorage
+        let searchEngine = localStorage.getItem('searchEngine') || 'duckduckgo.com';
+        localStorage.setItem('searchEngine', searchEngine);
+
+        // Set search engine in form action
+        document.querySelector('.input-row').action = `https://${searchEngine}/`;
+        queryInput.placeholder = `Search ${searchEngine}`;
+
+        // Change search engine
+        // if the query begins with "engine:" then change the search engine
+        // otherwise, search with the default search engine
+
+        document.querySelector('.input-row').addEventListener('submit', (e) => {
+            const query = queryInput.value;
+            if (query.startsWith('engine:') || query.startsWith('eng:') || query.startsWith('se:')) {
+                e.preventDefault();
+                searchEngine = query.split(':')[1];
+                localStorage.setItem('searchEngine', searchEngine);
+                document.querySelector('.input-row').action = `https://${searchEngine}/`;
+                queryInput.placeholder = `Search ${searchEngine}`;
+                queryInput.value = '';
+                queryInput.classList.remove('highlight');
+            }
+        });
+
+        // If the query begins with engine, eng, or se while the user is typing, highlight the input box
+        //    to signify that they're performing a cool action
+        queryInput.addEventListener('input', () => {
+            const query = queryInput.value;
+
+            if (query.value === '') suggestions.style.opacity = "1";
+            else suggestions.style.opacity = "0";
+
+            if (query.startsWith('engine:') || query.startsWith('eng:') || query.startsWith('se:')) {
+                searchButton.value = 'Change';
+                queryInput.classList.add('highlight');
+            }
+            else {
+                searchButton.value = 'Search';
+                queryInput.classList.remove('highlight');
+            }
+        });
+
+    </script>
+
+</header>
+
 </body>
+
 </html>

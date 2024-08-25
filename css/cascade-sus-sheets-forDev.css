@@ -1,0 +1,67 @@
+/*
+ALL THE FILES EXCEPT FROM `cascade-sus-sheets` ARE MEANT FOR DEVELOPMENT, NOT PRODUCTION
+
+the final file is the result of merging all the CSS into a single file,
+prexifing it (--mozilla, --ms, and that kind of stuff)
+and minifying it so more fps amogos website omg sus
+
+:]
+*/
+/* Base styles */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+/* Imports */
+@import url("variables.css");
+@import url("buttons.css"); /* Contains .buttons, a, etc. */
+@import url("layout.css"); /* Contains body, main, section, hr, header, footer */
+@import url("navbar.css"); /* Contains nav, #menu, .overlay */
+@import url("contributors.css"); /* Contains .coolboi, .bois */
+@import url("features.css");
+@import url("media-queries.css");
+
+/* Base styles */
+* {
+    transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Misc */
+code {
+    font-family: "Fira Code", monospace;
+    background-color: var(--amog-black-transparent);
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    border: solid 2px var(--amog-green-transparent);
+}
+
+.download-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.support {
+    width: calc(90% - 10px);
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 4px var(--amog-green-transparent);
+}
+
+#story .content {
+    width: calc(90% - 10px);
+    padding: 10px;
+    font-size: 20px;
+}
+
+.animation {
+    opacity: 0;
+}
+
+.scroll-animation {
+    opacity: 1;
+}

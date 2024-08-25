@@ -1,0 +1,140 @@
+/* Updated button styles */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
+    align-items: center;
+
+    :nth-child(odd), :nth-child(even) {
+        flex: 1;
+    }
+
+    :first-child {
+        border-radius: 1em 0.2em 0.2em 1em;
+    }
+
+    :last-child {
+        border-radius: 0.2em 1em 1em 0.2em;
+    }
+
+    :not(:first-child):not(:last-child) {
+        border-radius: 0.2em;
+    }
+
+}
+
+input {
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    background-color: var(--amog-green-transparent);
+    color: #000;
+
+    &:hover, &:focus {
+        background-color: transparent;
+        border: solid 2px var(--amog-green);
+        color: var(--amog-green);
+
+        box-shadow: 0 0 0 1px var(--amog-green-transparent),
+        0 2px 4px var(--amog-green-transparent),
+        0 4px 8px var(--amog-green-transparent),
+        0 8px 16px var(--amog-green-transparent),
+        0 16px 32px var(--amog-green-transparent),
+        0 32px 64px var(--amog-green-transparent);
+    }
+}
+
+button, .button {
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-prim, .primary {
+    background-color: var(--amog-green);
+    color: #000;
+
+    &:hover, &:focus {
+        background-color: var(--amog-green-transparent);
+        border: solid 2px var(--amog-green);
+        color: var(--amog-green);
+
+        box-shadow: 0 0 0 1px var(--amog-green-transparent),
+        0 2px 4px var(--amog-green-transparent),
+        0 4px 8px var(--amog-green-transparent),
+        0 8px 16px var(--amog-green-transparent),
+        0 16px 32px var(--amog-green-transparent),
+        0 32px 64px var(--amog-green-transparent);
+    }
+}
+
+.btn-sec, .secondary {
+    background-color: var(--amog-blue-transparent);
+    border: solid 2px var(--amog-blue);
+    color: var(--amog-blue);
+
+    &:hover, &:focus {
+        background-color: var(--amog-blue);
+        color: #000;
+
+        box-shadow: 0 0 0 1px var(--amog-blue-transparent),
+        0 2px 4px var(--amog-blue-transparent),
+        0 4px 8px var(--amog-blue-transparent),
+        0 8px 16px var(--amog-blue-transparent),
+        0 16px 32px var(--amog-blue-transparent),
+        0 32px 64px var(--amog-blue-transparent);
+    }
+}
+
+
+.btn-third, .third {
+    background-color: var(--amog-black-transparent);
+    border: solid 2px var(--amog-black-plus);
+    color: #FFF;
+
+    &:hover, &:focus {
+        background-color: var(--amog-black-plus);
+
+        box-shadow: 0 0 0 1px var(--amog-blacky-transparent),
+        0 2px 4px var(--amog-blacky-transparent),
+        0 4px 8px var(--amog-blacky-transparent),
+        0 8px 16px var(--amog-blacky-transparent),
+        0 16px 32px var(--amog-blacky-transparent),
+        0 32px 64px var(--amog-blacky-transparent);
+    }
+}
+
+button, .button, a {
+    outline: 2px solid transparent;
+}
+
+a {
+    color: var(--amog-green);
+    text-decoration: none;
+    font-weight: 900;
+
+    &:focus, &:focus-within {
+        outline: 2px solid var(--amog-hightlight);
+    }
+}
+
+a:hover, a:focus, a:active, span {
+    color: var(--amog-blue);
+}

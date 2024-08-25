@@ -1,0 +1,121 @@
+
+@media prefers-reduced-motion {
+    * {
+        /*noinspection CssUnknownProperty*/
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    footer {
+        grid-template-areas:
+      "logo"
+      "text"
+      "links"
+      "social";
+        grid-template-columns: 1fr;
+
+        .footer__subsection {
+            &:nth-child(2) {
+                border-radius: 2em 2em 0.5em 0.5em;
+            }
+
+            &:nth-child(3) {
+                border-radius: 0.5em;
+            }
+
+            &:nth-child(4) {
+                border-radius: 0.5em 0.5em 2em 2em;
+            }
+        }
+
+    }
+
+    nav {
+
+        :not(:first-child) {
+            display: none;
+        }
+
+        #menu {
+            position: fixed;
+            z-index: 100;
+            aspect-ratio: 1/1;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            float: right;
+            text-align: right;
+        }
+
+        &.responsive {
+
+            & a {
+                display: block;
+                float: none;
+                text-align: left;
+            }
+
+            & .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 1;
+                background-color: var(--amog-black-transparent);
+                backdrop-filter: blur(8px);
+            }
+        }
+    }
+
+    header {
+        height: 60vh;
+        gap: 10px;
+    }
+
+    button {
+        padding: 10px 30px;
+        border-radius: 15px;
+    }
+
+    header h1, header h1 span {
+        font-size: 40px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+
+        & .button, & button {
+            flex: 1;
+            width: 100%;
+        }
+
+    }
+
+    .feature {
+        flex-direction: column !important;
+        border-radius: 20px;
+
+        & img, & .lbl {
+            width: 100%;
+        }
+
+        & .lbl {
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+
+            & h1, & p {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
