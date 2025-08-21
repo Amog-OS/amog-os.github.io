@@ -1,0 +1,194 @@
+<!--haccing skills #1: view page source-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sus OS for aSUS computers.">
+    <meta name="keywords" content="amogos,amog os,amongos,amogus,among us">
+    <meta name="theme-color" content="#66ddcc">
+    <meta property="og:site_name" content="AmogOS">
+    <meta name="og:title" content="AmogOS | Home">
+    <meta name="og:description" content="A sus OS for aSUS computers.">
+    <meta name="og:image" itemprop="image" content="https://amog-os.github.io/icons/sus.png">
+    <link rel="shortcut icon" href="icons/sus.ico" sizes="32x32">
+    <link rel="bookmark" href="icons/sus.ico">
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <title>AmogOS | Sussy wussy.</title>
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #main-container{
+            height: 100vh;
+        }
+        #logo-container{
+            padding-top: calc(36vh - 30px);
+            width: 100%;
+            text-align: center;
+        }
+        #text-logo, #slogan{
+            display: inline-block;
+            font-family: "Poppins";
+            color: transparent;
+            background: linear-gradient(-30deg, #669999, #66ddcc);
+            -webkit-background-clip: text;
+            cursor: default;
+        }
+        #text-logo{
+            font-size: 60px;
+            line-height: 75px;
+        }
+        #slogan-container{
+            padding-top: 1.5%;
+            padding-left: 12%;
+            padding-right: 12%;
+        }
+        #slogan{
+            font-size: 22px;
+            line-height: 28px;
+        }
+        #download-container{
+            padding-top: 1.5%;
+            width: 100%;
+            text-align: center;
+        }
+        .buttons{
+            transition: 0.3s ease;
+            width: 200px;
+            height: 70px;
+            margin: 10px;
+            outline: none;
+            border: 0px solid transparent;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: "Poppins";
+            cursor: pointer;
+        }
+        #download{
+            background-image: linear-gradient(-30deg, #669999, #66ddcc);
+        }
+        #download:hover{
+            box-shadow: 0px 0px 12px #66ddcc;
+        }
+        #discord{
+            background-image: linear-gradient(-30deg, #4e5d94, #7289da);
+        }
+        #discord:hover{
+            box-shadow: 0px 0px 12px #7289da;
+        }
+        #github{
+            background-image: linear-gradient(-30deg, #0D1117, #161B22);    
+        }
+        #github:hover{
+            box-shadow: 0px 0px 12px #070a0e;
+        }
+        #donate{
+            transition: 0.3s ease;
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            height: 48px;
+            margin-right: -180px;
+            padding: 12px;
+            outline: none;
+            background-image: linear-gradient(-30deg, #297EFF, #8FC7FF);
+            color: #ffffff;
+            font-size: 12px;
+            border: none;
+            border-radius: 18px;
+            font-family: "Poppins";
+            cursor: pointer;
+        }
+        #donate:hover{
+            box-shadow: 0px 0px 9px #8FC7FF;
+        }
+        @media screen and (max-width: 850px) {
+            #logo-container{
+                padding-top: calc(36vh - 60px);
+            }
+            header, #copyright{
+                background-color: transparent;
+            }
+            body{
+                background-image: none;
+            }
+        }
+        @media screen and (max-width: 620px) {
+            #logo-container{
+                padding-top: calc(26vh - 60px);
+            }
+            #slogan{
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <header>
+            <nav>
+                <ul id="bar">
+                    <li><a id="nav-logo" href="https://amog-os.github.io"></a></li>
+                    <li><a id="nav-home" class="now" href="index.html">Home</a></li>
+                    <li><a id="nav-install" href="install.html">Install</a></li>
+                    <li><a id="nav-about" href="about.html">About</a></li>
+                    <li><a id="nav-donate" href="donate.html">Donate</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="logo-container">
+            <div id="text-logo-container">
+                <span id="text-logo">AmogOS</span>
+            </div>
+            <div id="slogan-container">
+                <span id="slogan">A sus OS for aSUS computers</span>
+            </div>
+        </div>
+        <div id="download-container">
+            <button id="download" class="buttons" onclick="download()">Unsupported Browser</button>
+            <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
+            <button id="github" class="buttons" onclick="github()">Visit our GitHub!</button>
+        </div>
+        <footer>
+            <p id="copyright">© AmogOS Project. All Suspiciousness Reserved.</p>
+        </footer>
+    </div>
+    </div>
+    <script>
+        document.getElementById("download").innerHTML = "Download";
+        
+        function download(){
+            window.location.href = "downloads.html";
+        }
+        function discord(){
+            window.open("https://discord.gg/6ut87Hqukr");
+        }
+        function github(){
+            window.open("https://github.com/Amog-OS/AmogOS");
+        }
+
+        window.onload = function(){
+            document.body.style.backgroundImage = "url('icons/bg-1080p.jpg')";
+        }
+        
+        var secretNum = 0;
+        document.getElementById("text-logo").onclick = function(){
+            secretNum += 1;
+            if (secretNum == 10){
+                document.getElementById("slogan").innerHTML = "SUSSY";
+                document.getElementById("text-logo").innerHTML = "Sussy Baka";
+                document.body.style.backgroundImage = "url(icons/fongzoi.png)";
+            }
+        }
+
+        console.log("%c3yr old haccing skills #2: inspect elements and console", "color:blue; font-size:50px");
+        console.log("%cstop being s u s you little baka", "color:red; font-size:80px");
+    </script>
+</body>
+</html>
+
